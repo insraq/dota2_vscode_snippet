@@ -1,0 +1,376 @@
+CanAbilityBeUpgraded( ) : bool
+Can this Ability be upgraded?
+CanBeDisassembled( ) : bool
+Can this item be disassembled?
+GetAbilityDamage( ) : int
+Get the basic damage value of this Ability.
+GetAutoCastState( ) : bool
+Get the autocast state of this Ability.
+GetBehavior( ) : int
+Get the behavior type of this Ability.
+GetCastPoint( ) : float
+Gets the cast point of this Ability.
+GetCastRange( ) : int
+Gets the cast range of this Ability.
+GetCaster( ) : handle
+Get the unit who owns this Ability.
+GetChannelTime( ) : float
+How long does this Ability channel?
+GetChannelledManaCostPerSecond( ) : int
+Get the mana cost per second of this Ability while channeling it.
+GetCooldownTimeRemaining( ) : float
+Get the cooldown time remaning for this Ability.
+GetCurrentCharges( ) : int
+Get the current charges of this item.
+GetDamageType( ) : int
+Get the damage type of this Ability.
+GetHeroLevelRequiredToUpgrade( ) : int
+Get the Hero level required to upgrade this Ability.
+GetInitialCharges( ) : int
+Get the initial charges of this item.
+GetLevel( ) : int
+Get the current level of the Ability.
+GetManaCost( ) : int
+Get the mana cost of this Ability.
+GetMaxLevel( ) : int
+Get the max level of this Ability.
+GetName( ) : cstring
+Get the name of this Ability.
+GetPowerTreadsStat( ) : int
+Get the stat these power treads are set to.
+GetSecondaryCharges( ) : int
+Get the secondary charges of this item.
+GetSpecialValueFloat( cstring pszKey ) : float
+Get an int internal data parameter of this Abilty.
+GetSpecialValueInt( cstring pszKey ) : int
+Get an int internal data parameter of this Abilty.
+GetTargetFlags( ) : int
+Get the flags for this Ability.
+GetTargetTeam( ) : int
+Get the target team of this Ability.
+GetTargetType( ) : int
+Get the target type of this Ability.
+GetToggleState( ) : bool
+Get the toggle state of this Ability.
+IsActivated( ) : bool
+Is this Ability currently activated?
+IsAttributeBonus( ) : bool
+Is this Ability the attribute bonus?
+IsChanneling( ) : bool
+Is this Ability being channelled?
+IsCombineLocked( ) : bool
+Is this item combine locked?
+IsCooldownReady( ) : bool
+Is this Ability off cooldown?
+IsFullyCastable( ) : bool
+Does the caster have the mana to use this Ability, and is it off cooldown?
+IsHidden( ) : bool
+Is this Ability currently hidden?
+IsInAbilityPhase( ) : bool
+Is this Ability being cast?
+IsItem( ) : bool
+Is this an Item?
+IsOwnersManaEnough( ) : bool
+Does the caster have the mana to use this Ability?
+IsPassive( ) : bool
+Is this a passive Ability?
+IsStealable( ) : bool
+Can this Ability be stolen?
+IsStolen( ) : bool
+Is this the stolen version of an Ability?
+IsToggle( ) : bool
+Is this a toggled Ability?
+IsTrained( ) : bool
+Is this Ability Trained at all?
+ProcsMagicStick( ) : bool
+Does this Ability proc Magic Stick?
+ToggleAutoCast( ) : void
+Toggle the autocast state of this Ability.
+
+
+Action_AttackMove( vector location ) : void
+Tell a bot to attack-move a location.
+Action_AttackUnit( handle hTarget, bool bOnce ) : void
+Tell a bot to attack a target unit. If bOnce is specified, it will auto-pop the action after one attack.
+Action_Buyback( ) : void
+Tell a bot to buy back into the game.
+Action_Chat( cstring pszMessage, bool bAllChat ) : void
+Tell a bot to say something.
+Action_ClearActions( bool bStop ) : void
+Clear current action stack and return to idle. Optionally stop in place.
+Action_Courier( handle hCourier, int eAction ) : bool
+Tell a bot to use the courier.
+Action_DisassembleItem( handle hItem ) : void
+Tell a bot to disassemble an item.
+Action_DropItem( handle hItem, vector location ) : void
+Tell a bot to drop an item.
+Action_LevelAbility( cstring pszAbilityName ) : void
+Tell a bot to level up a specific ability.
+Action_MoveToLocation( vector location ) : void
+Tell a bot to move to a location.
+Action_MoveToUnit( handle hTarget ) : void
+Tell a bot to move to a unit and start following them.
+Action_PickUpItem( handle hItem ) : void
+Tell a bot to pick up a dropped item.
+Action_PickUpRune( int nRune ) : void
+Tell a bot to pick up a rune.
+Action_Ping( float x, float y, bool bNormalPing ) : void
+Tell a bot to ping a location.
+Action_PurchaseItem( cstring pszItemName ) :
+Tell a bot to purchase an item by name.
+Action_SellItem( handle hItem ) : void
+Tell a bot to sell an item.
+Action_SetItemCombineLock( handle hItem, bool bLocked ) : void
+Set the combine state on an item.
+Action_SwapItems( int nSlot1, int nSlot2 ) : void
+Tell a bot to swap the contents of two item slots.
+Action_UseAbility( handle hAbility ) : void
+Tell a bot to use a non-targeted ability.
+Action_UseAbilityOnEntity( handle hAbility, handle hTarget ) : void
+Tell a bot to use a unit-targeted ability.
+Action_UseAbilityOnLocation( handle hAbility, vector location ) : void
+Tell a bot to use a location-targeted ability.
+Action_UseAbilityOnTree( handle hAbility, int iTree ) : void
+Tell a bot to use a tree-targeted ability.
+Action_UseShrine( handle hShrine ) : void
+Tell a bot to use the specified shrine.
+CanBeSeen( ) : bool
+Can we currently see this bot? Always true for bots on our team. Many function will not return valid data without this being true.
+DistanceFromFountain( ) : int
+Gets the unit’s straight-line distance from the team’s fountain (0 is in the fountain).
+DistanceFromSecretShop( ) : int
+Gets the unit’s straight-line distance from the closest secret shop (0 is in a secret shop).
+DistanceFromSideShop( ) : int
+Gets the unit’s straight-line distance from the closest side shop (0 is in a side shop).
+FindAoELocation( bool bEnemies, bool bHeroes, vector vBaseLocation, int nMaxDistanceFromBase, int nRadius, float fTimeInFuture, int nMaxHealth ) : variant
+Finds optimal AoE location that overlaps heroes/creeps.
+FindItemSlot( cstring pszItemName ) : int
+Get the slot a named item is in
+GetAbilityByName( cstring pszAbilityName ) : handle
+Get a bot’s ability by name
+GetAbilityPoints( ) : int
+Get the number of ability points the bot can spend.
+GetActiveMode( ) : int
+Get the active mode ID
+GetActiveModeDesire( ) : float
+Get the desire value of the active mode
+GetActualDamage( int nDamage, int eDamageType ) : int
+Get damage value after reductions.
+GetArmor( ) : float
+Gets the armor of the unit.
+GetAssignedLane( ) : int
+Get the lane that a unit is assigned to.
+GetAttackDamage( ) : float
+Gets the total attack damage.
+GetAttackPoint( ) : float
+Gets the attack point of the unit.
+GetAttackRange( ) : int
+Gets the attack range of the unit.
+GetAttackSpeed( ) : float
+Gets the attack speed of the unit.
+GetAttackTarget( ) : handle
+Get the unit being attacked.
+GetAttributeValue( int nAttribute ) : int
+Gets the evasion resist of the unit.
+GetBaseDamage( ) : float
+Gets the base attack damage of the unit.
+GetBaseDamageVariance( ) : float
+Gets the variance of the base attack damage.
+GetBaseMovementSpeed( ) : int
+Get a bot’s base movement speed.
+GetBoundingRadius( ) : float
+Get the size of the unit’s bounding radius.
+GetBuybackCooldown( ) : float
+Can the bot buy back?
+GetBuybackCost( ) : int
+Can the bot buy back?
+GetCourierValue( ) : int
+Get the value of items on the courier owned by this bot.
+GetCurrentActionType( ) : int
+Get the type of the current action.
+GetCurrentActiveAbility( ) : handle
+Get the ability this bot is currently casting.
+GetCurrentMovementSpeed( ) : int
+Get a bot’s current movement speed.
+GetDifficulty( ) : int
+Get the bot’s difficulty settings.
+GetEstimatedDamageToTarget( bool bCurrentlyAvailable, handle hTarget, float fDuration, int nDamageTypes ) : int
+Get an estimate of how much damage a bot can do in the specified timeframe. Takes into account item and ability usage based on current mana/cooldowns for allies, for enemies it assumes all items/abilities are available. Uses no positional/situation info. Basically asks ‘How scary is X to Y?’.
+GetEvasion( ) : float
+Gets the evasion resist of the unit.
+GetExtrapolatedLocation( float fDelay ) : vector
+Extrapolates their location in the future, based on past movement.
+GetFacing( ) : int
+Get a bot’s facing (0-255).
+GetGold( ) : int
+Get the bot’s current gold.
+GetGroundHeight( ) : int
+Get a bot’s height value.
+GetHealth( ) : int
+Get a bot’s current health.
+GetHealthRegen( ) : float
+Get a bot’s health regen rate.
+GetItemInSlot( int nSlot ) : handle
+Get a bot’s item by slot
+GetItemSlotType( int nSlot ) : int
+Get the type of the specified item slot
+GetLastAttackTime( ) : float
+Gets the last attack time of the unit.
+GetLastSeenLocation( ) : vector
+Get the location at which this unit was last seen.
+GetLevel( ) : int
+Get the bot’s current level.
+GetLocation( ) : vector
+Geta bot’s 2D location.
+GetMagicResist( ) : float
+Gets the magic resist of the unit.
+GetMana( ) : int
+Get a bot’s current mana.
+GetManaRegen( ) : float
+Get a bot’s mana regen rate.
+GetMaxHealth( ) : int
+Get a bot’s maximum health.
+GetMaxMana( ) : int
+Get a bot’s maximum mana.
+GetModifier( int nModifier ) : cstring
+Get a specific modifier name.
+GetModifierStackCount( int nModifier ) : int
+Get a modifier’s stack count.
+GetMostRecentPing( ) : variant
+Get the most recent ping by this player.
+GetMovementDirectionStability( ) : float
+Indicates how consistent the unit’s movement has been over the last few seconds. 1 is a straight line, 0 is serpentine.
+GetNearbyBarracks( int nRadius, bool bEnemies ) : variant
+Get all nearby barracks.
+GetNearbyCreeps( int nRadius, bool bEnemies ) : variant
+Get nearby creeps that we can see.
+GetNearbyHeroes( int nRadius, bool bEnemies, int eBotMode ) : variant
+Get nearby heroes that we can see in a mode. Can specify a bot mode when querying allies. BOT_MODE_NONE does no mode filtering.
+GetNearbyShrines( int nRadius, bool bEnemies ) : variant
+Get all nearby shrines.
+GetNearbyTowers( int nRadius, bool bEnemies ) : variant
+Get all nearby towers.
+GetNearbyTrees( int nRadius ) : variant
+Get nearby trees.
+GetNextItemPurchaseValue( ) : int
+Gets the purchase value of the next item the unit wants to purchase.
+GetOffensivePower( ) : float
+Get the unit’s current offensive power.
+GetPlayerID( ) : int
+Get the unit’s controlling player id.
+GetPrimaryAttribute( ) : int
+Gets the evasion resist of the unit.
+GetRawOffensivePower( ) : float
+Get the unit’s raw offensive power.
+GetRespawnTime( ) : float
+Get the time in seconds until a bot respawns.
+GetSecondsPerAttack( ) : float
+Gets the number of seconds per attack that a unit can do.
+GetSlowDuration( bool bCurrentlyAvailable ) : float
+Get the duration of available slows.
+GetSpellAmp( ) : float
+Gets the spell damage amplification of the unit.
+GetStashValue( ) : int
+Get the value of the items in the bot’s stash.
+GetStunDuration( bool bCurrentlyAvailable ) : float
+Get the duration of available stuns.
+GetTarget( ) : handle
+Get the current target of this bot.
+GetTimeSinceLastSeen( ) : float
+Get how long it’s been since the unit was seen.
+GetUnitName( ) : cstring
+Get the unit’s name.
+GetVelocity( ) : vector
+Get the velocity the unit has moved over the last two seconds.
+HasBlink( bool bCurrentlyAvailable ) : bool
+Does the bot have a blink available?
+HasBuyback( ) : bool
+Can the bot buy back?
+HasInvisibility( bool bCurrentlyAvailable ) : bool
+Does the bot have invisibility available?
+HasMinistunOnAttack( ) : bool
+Does the bot have ministuns on attack?
+HasModifier( cstring pszModifierName ) : bool
+Does the bot have the specified modifier?
+HasScepter( ) : bool
+Does the unit have Aghanim’s Scepter?
+HasSilence( bool bCurrentlyAvailable ) : bool
+Does the bot have a silence available?
+IsAlive( ) : bool
+Is a bot alive?
+IsAttackImmune( ) : bool
+Is the unit attack immune?
+IsBlind( ) : bool
+Is the unit blind?
+IsBlockDisabled( ) : bool
+Is the unit block disabled?
+IsBot( ) : bool
+Is this unit owned by a bot?
+IsBuilding( ) : bool
+Is this unit a building?
+IsChanneling( ) : bool
+Is this bot currently channeling an ability?
+IsCreep( ) : bool
+Is this unit a creep?
+IsDisarmed( ) : bool
+Is the unit disarmed?
+IsDominated( ) : bool
+Is the unit dominated?
+IsEvadeDisabled( ) : bool
+Is the unit evade disabled?
+IsFort( ) : bool
+Is this unit a fort (the main ancient building)?
+IsHero( ) : bool
+Is this unit a hero?
+IsHexed( ) : bool
+Is the unit hexed?
+IsIllusion( ) : bool
+Is this unit an illusion?
+IsInvisible( ) : bool
+Is the unit invisible?
+IsInvulnerable( ) : bool
+Is the unit invulnerable?
+IsMagicImmune( ) : bool
+Is the unit magic immune?
+IsMuted( ) : bool
+Is the unit muted?
+IsNightmared( ) : bool
+Is the unit nightmared?
+IsRooted( ) : bool
+Is the unit rooted?
+IsSilenced( ) : bool
+Is the unit silenced?
+IsSpeciallyDeniable( ) : bool
+Is the unit specially deniable?
+IsStunned( ) : bool
+Is the unit stunned?
+IsTower( ) : bool
+Is this unit a tower?
+IsUnableToMiss( ) : bool
+Is the unit unable to miss?
+IsUsingAbility( ) : bool
+Is this bot currently casting an ability?
+NumModifiers( ) : int
+Get the number of modifiers on this bot.
+SetNextItemPurchaseValue( int nGold ) : void
+Sets the value of the next item the unit wants to purchase.
+SetTarget( handle ) : void
+Set the current target of this bot. Causes no actions, but is used for coordinating between modes and ability/item usage.
+TimeSinceDamagedByAnyHero( ) : float
+How long as it been since the unit was damaged by any enemy?
+TimeSinceDamagedByCreep( ) : float
+How long as it been since the unit was damaged by a creep?
+TimeSinceDamagedByHero( handle hHero ) : float
+How long as it been since the unit was damaged by an specific enemy?
+TimeSinceDamagedByTower( ) : float
+How long as it been since the unit was damaged by a tower?
+UsingItemBreaksInvisibility( ) : bool
+Will using an item break invisibiilty?
+WasRecentlyDamagedByAnyHero( float fTime ) : bool
+Was the unit recently damaged by any enemy?
+WasRecentlyDamagedByCreep( float fTime ) : bool
+Was the unit recently damaged by a creep?
+WasRecentlyDamagedByHero( handle hHero, float fTime ) : bool
+Was the unit recently damaged by an specific enemy?
+WasRecentlyDamagedByTower( float fTime ) : bool
+Was the unit recently damaged by a tower?

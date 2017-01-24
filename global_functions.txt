@@ -1,0 +1,150 @@
+CMBanHero( cstring ) : void
+Ban a hero in Captain’s mode by name.
+CMPickHero( cstring ) : void
+Pick a hero in Captain’s mode by name.
+Clamp( float, float, float ) : float
+Clamps the value between the two supplied values.
+DebugDrawCircle( vector, float, int, int, int ) : void
+Draws a circle for one frame
+DebugDrawLine( vector, vector, int, int, int ) : void
+Draws a line for one frame
+DebugDrawText( float, float, cstring, int, int, int ) : void
+Draws text for one frame
+DotaTime( ) : float
+Gets the game time – matches the in-game clock. Pauses with game pause.
+GameTime( ) : float
+Gets the time since the hero picking phase started. Pauses with game pause.
+GetAncient( int ) : handle
+Gets the ancient on the specified team.
+GetBarracks( int, int ) : handle
+Gets the specified barracks on the specified team.
+GetBot( ) : handle
+Get the bot on which script is currently being run.
+GetCMCaptain( ) : int
+Gets player ID of the Captain’s Mode captain.
+GetCMPhaseTimeRemaining( ) : float
+Get the amount of time remaining in the current Captain’s Mode phase.
+GetCourier( int ) : handle
+Gets a specific courier.
+GetCourierState( handle ) : int
+Gets a specific courier.
+GetDefendLaneDesire( int ) : float
+Gets the team-wide desire to defend a lane.
+GetDroppedItemList( ) : variant
+Returns the array of items that we can see that have been dropped on the ground.
+GetFarmLaneDesire( int ) : float
+Gets the team-wide desire to farm a lane.
+GetGameMode( ) : int
+Gets the game mode type.
+GetGameState( ) : int
+Gets the current state of the game.
+GetGameStateTimeRemaining( ) : float
+Gets how much time is remaining in the current game state.
+GetHeightLevel( vector ) : int
+Get the height level (1 through 5) of the specified location.
+GetHeroPickState( ) : int
+Gets the current phase of hero picking.
+GetItemCost( cstring ) : int
+Get the cost of an item by name.
+GetItemStockCount( cstring ) : int
+Get the current stock count for the named item.
+GetLaneFrontAmount( int, int, bool ) : float
+Gets the lane front amount (0.0 - 1.0) of the specified team’s creeps along the specified lane. Optionally can ignore towers for front calculation.
+GetLaneFrontLocation( int, int, float ) : vector
+Gets the location of the lane front for the specified team and lane. Always ignores towers. Has a third parameter for a distance delta from the front.
+GetLocationAlongLane( int, float ) : vector
+Calculates the location of the specified amount (0.0 - 1.0) along the specified lane.
+GetNeutralSpawners( ) : variant
+Get the location of all neutral spawners, and what side of the river they’re on.
+GetNumCouriers( ) : int
+Gets the number of couriers on the team.
+GetPushLaneDesire( int ) : float
+Gets the team-wide desire to push a lane.
+GetRoamDesire( ) : float
+Gets the team-wide desire to roam to a target.
+GetRoamTarget( ) : handle
+Gets the target of the team-wide roam desire.
+GetRoshanDesire( ) : float
+Gets the team-wide desire to kill Roshan.
+GetRoshanKillTime( ) : float
+Returns the last time that Roshan was killed.
+GetRuneSpawnLocation( int ) : vector
+Gets the spawn location of the specified rune.
+GetRuneStatus( int ) :
+Gets the status of the specified rune.
+GetRuneTimeSinceSeen( int ) : float
+Gets the time since we’ve seen the specified rune.
+GetRuneType( int ) : int
+Gets the type of the specified rune, if known.
+GetScriptDirectory( ) : cstring
+Get the directory from which bot scripts are being run.
+GetSelectedHeroName( int ) : cstring
+Gets the name of the hero selected by a player.
+GetShrine( int, int ) : handle
+Gets the specified shrine on the specified team.
+GetTeam( ) : int
+Get the team on which script is currently being run.
+GetTeamForPlayer( int ) : int
+Gets the team of the specified player.
+GetTeamMember( int, int ) : handle
+Get a member of a team.
+GetTeamPlayers( int ) : variant
+Gets a list of Player IDs for the specified team.
+GetTower( int, int ) : handle
+Gets the specified tower on the specified team.
+GetTreeLocation( int ) : vector
+Gets the location of the specified tree.
+GetUnitList( int ) : variant
+Gets a list of visible units.
+GetUnitPotentialValue( handle, vector, float ) : int
+Gets the 0-255 potential-value location of a hero at the specified location and radius.
+GetUnitToLocationDistance( handle, vector ) : float
+Get the distance between a unit and a location.
+GetUnitToUnitDistance( handle, handle ) : float
+Get the distance between two units.
+GetWorldBounds( ) : variant
+Gets the minimum and maximum bounds of the world.
+IsCMBannedHero( cstring ) : bool
+Has the named hero been banned in Captain’s Mode?
+IsCMPickedHero( int, cstring ) : bool
+Has the named hero been picked in Captain’s Mode?
+IsCourierAvailable( ) : bool
+Asks if a courier is available to use.
+IsInCMBanPhase( ) : bool
+Is Captain’s Mode in Ban phase?
+IsInCMPickPhase( ) : bool
+Is Captain’s Mode in Pick phase?
+IsItemPurchasedFromSecretShop( cstring ) : bool
+Can the named item can be purchased from the secret shop?
+IsItemPurchasedFromSideShop( cstring ) : bool
+Can the named item can be purchased from the side shop?
+IsLocationPassable( vector ) : bool
+Can the specified location currently be pathed through.
+IsPlayerBot( int ) : bool
+Asks if a specific Player ID is a bot.
+IsPlayerInHeroSelectionControl( int ) : bool
+Is this player allowed to currently allowed to select a hero?
+IsTeamPlayer( int ) : bool
+Asks if a specific Player ID is a member of Radiant or Dire.
+Max( float, float ) : float
+Returns the smaller of the two supplied values.
+Min( float, float ) : float
+Returns the smaller of the two supplied values.
+RandomFloat( float, float ) : float
+Get a random float within a range
+RandomInt( int, int ) : int
+Get a random int within a range
+RandomVector( float ) : vector
+Get a random 2D vector of the specified length.
+RealTime( ) : float
+Gets the real-world time since the app has started. Does not pause with game pause.
+RemapVal( float, float, float, float, float ) : float
+Linearly remaps X from A,B to C,D
+RemapValClamped( float, float, float, float, float ) : float
+Linearly remaps X from A,B to C,D, clamping to C,D
+RollPercentage( int ) : bool
+Rolls a number from 1 to 100 and returns true if the roll is less than or equal to the number specified
+SelectHero( int, cstring ) : void
+Selects a hero for a player.
+SetCMCaptain( int ) : void
+Sets a player to be Captain’s Mode captain.
