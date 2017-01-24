@@ -55,7 +55,7 @@ f.read.each_line do |line|
   end
   next if current.nil?
   snippets[current] = {
-    prefix: ":#{current.split(/(?=[A-Z])/)[0]}",
+    prefix: current.split(/(?=[A-Z])/)[0],
     body: current,
     description: "#{current}\n#{stripped}"
   }
@@ -74,7 +74,7 @@ f.read.each_line do |line|
   snippets[current] = {
     prefix: current.split(/(?=[A-Z])/)[0],
     body: current,
-    description: "#{current}\n#{stripped}"
+    description: "Global: #{current}\n#{stripped}"
   }
   current = nil
 end
@@ -85,7 +85,7 @@ f.read.each_line do |line|
   next if stripped == ''
   key = stripped.split('=')[0].strip
   snippets[key] = {
-    prefix: stripped.split('_')[0],
+    prefix: stripped.split('_')[0] + '_',
     body: key,
     description: stripped
   }
