@@ -40,8 +40,20 @@ GetGameState( ) : int
 Gets the current state of the game.
 GetGameStateTimeRemaining( ) : float
 Gets how much time is remaining in the current game state.
+GetGlyphCooldown( ) : float
+Returns the cooldown on glyph (0 if available).
 GetHeightLevel( vector ) : int
 Get the height level (1 through 5) of the specified location.
+GetHeroAssists( int ) : int
+Gets the assists of the hero controlled by the specified PlayerID.
+GetHeroDeaths( int ) : int
+Gets the deaths of the hero controlled by the specified PlayerID.
+GetHeroKills( int ) : int
+Gets the kills of the hero controlled by the specified PlayerID.
+GetHeroLastSeenInfo( int ) : variant
+Gets the {location, time} of the last seen PlayerID unit.
+GetHeroLevel( int ) : int
+Gets the level of the hero controlled by the specified PlayerID.
 GetHeroPickState( ) : int
 Gets the current phase of hero picking.
 GetItemCost( cstring ) : int
@@ -58,6 +70,8 @@ GetNeutralSpawners( ) : variant
 Get the location of all neutral spawners, and what side of the river they’re on.
 GetNumCouriers( ) : int
 Gets the number of couriers on the team.
+GetOpposingTeam( ) : int
+Gets the team that you’re fighting against.
 GetPushLaneDesire( int ) : float
 Gets the team-wide desire to push a lane.
 GetRoamDesire( ) : float
@@ -80,16 +94,22 @@ GetScriptDirectory( ) : cstring
 Get the directory from which bot scripts are being run.
 GetSelectedHeroName( int ) : cstring
 Gets the name of the hero selected by a player.
+GetShopLocation( int, int ) : vector
+Get location for the specified shop.
 GetShrine( int, int ) : handle
 Gets the specified shrine on the specified team.
+GetShrineCooldown( handle ) : float
+Gets the healing cooldown of the specified shrine.
 GetTeam( ) : int
 Get the team on which script is currently being run.
 GetTeamForPlayer( int ) : int
 Gets the team of the specified player.
-GetTeamMember( int, int ) : handle
+GetTeamMember( int ) : handle
 Get a member of a team.
 GetTeamPlayers( int ) : variant
 Gets a list of Player IDs for the specified team.
+GetTimeOfDay( ) : float
+Gets the curren time of day (0.0 is midnight, 0.5 is noon).
 GetTower( int, int ) : handle
 Gets the specified tower on the specified team.
 GetTreeLocation( int ) : vector
@@ -110,6 +130,8 @@ IsCMPickedHero( int, cstring ) : bool
 Has the named hero been picked in Captain’s Mode?
 IsCourierAvailable( ) : bool
 Asks if a courier is available to use.
+IsHeroAlive( int ) : bool
+Asks if the specified PlayerID is alive.
 IsInCMBanPhase( ) : bool
 Is Captain’s Mode in Ban phase?
 IsInCMPickPhase( ) : bool
@@ -119,11 +141,15 @@ Can the named item can be purchased from the secret shop?
 IsItemPurchasedFromSideShop( cstring ) : bool
 Can the named item can be purchased from the side shop?
 IsLocationPassable( vector ) : bool
-Can the specified location currently be pathed through.
+Can the specified location currently be pathed through?
+IsLocationVisible( vector ) : bool
+Can the specified location currently be seen?
 IsPlayerBot( int ) : bool
 Asks if a specific Player ID is a bot.
 IsPlayerInHeroSelectionControl( int ) : bool
 Is this player allowed to currently allowed to select a hero?
+IsShrineHealing( handle ) : float
+Gets whether the Shrine is actively healing or not.
 IsTeamPlayer( int ) : bool
 Asks if a specific Player ID is a member of Radiant or Dire.
 Max( float, float ) : float
